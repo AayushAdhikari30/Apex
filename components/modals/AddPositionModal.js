@@ -6,7 +6,7 @@ import { clamp } from '@/store/apexStore'
 
 const DEFAULTS = { sym: '', lyr: 'growth', val: '', ent: '', sl: '20', type: 'Equity / ETF', note: '' }
 
-export default function AddPositionModal({ open, onClose }) {
+export default function AddPositionModal({ open, onClose, onAdded }) {
   const { addPosition } = useApexStore()
   const [form, setForm] = useState(DEFAULTS)
   const [err, setErr] = useState('')
@@ -26,9 +26,11 @@ export default function AddPositionModal({ open, onClose }) {
       type: form.type,
       note: form.note,
     })
+    const sym = form.sym.toUpperCase().trim()
     setForm(DEFAULTS)
     setErr('')
     onClose()
+    onAdded?.(sym)
   }
 
   return (

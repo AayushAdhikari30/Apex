@@ -16,6 +16,7 @@ const NAV = [
   { id: 'tax', icon: '$', label: 'Tax Engine', group: 'Tools' },
   { id: 'milestones', icon: '🏆', label: 'Milestones', group: 'Tools' },
   { id: 'alerts', icon: '🔔', label: 'Alerts', badge: 'alerts', group: 'Tools' },
+  { id: 'revenue', icon: '💰', label: 'Revenue Tracker', group: 'Tools' },
   { id: 'settings', icon: '⚙', label: 'Settings', group: 'Tools' },
 ]
 
